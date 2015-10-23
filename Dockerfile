@@ -8,6 +8,7 @@ MAINTAINER Justin Grant <jlgrock@gmail.com>
 RUN yum install -y python-setuptools \
 	python-setuptools-devel && \
 	easy_install pip && \
+	easy_install -U distribute && \
 	pip install supervisor
 
 RUN yum install -y logrotate && \
@@ -30,13 +31,8 @@ COPY assets/setup/ /app/setup/
 RUN chmod 755 /app/setup/install
 RUN /app/setup/install
 
-# Expose all port
-EXPOSE 8161 
-EXPOSE 61616 
-EXPOSE 5672
-EXPOSE 61613
-EXPOSE 1883 
-EXPOSE 61614
+# Expose ports - Openwire/TCP, Jetty, AMQP, STOMP, MQTT, WS
+EXPOSE 61616 8161 5672 61613 1883 61614
 
 # Create Mount points.  This data will be lost unless you mount a volume with the -v or -volumes-from
 VOLUME ["/data/activemq"]

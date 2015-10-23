@@ -4,7 +4,7 @@ Dockerfile to build a ActiveMQ container image.
 
 ## Version
 
-Current Version: **5.12.0**
+Current Version: **5.9.0**
 
 # Hardware Requirements
 
@@ -21,15 +21,15 @@ Current Version: **5.12.0**
 Pull the image from the docker index. This is the recommended method of installation as it is easier to update image. These builds are performed by the **Docker Trusted Build** service.
 
 ```bash
-docker pull jlgrock/activemq:5.12.0
+docker pull jlgrock/activemq:5.9.0
 ```
 
 Alternately you can build the image locally.
 
 ```bash
-git clone https://github.com/jlgrock/activemq.docker.git
-cd activemq
-docker build --tag="$USER/activemq" .
+git clone https://github.com/jlgrock/docker.activemq.git
+cd docker.activemq
+docker build --tag="jlgrock/activemq" .
 ```
 
 # Quick Start
