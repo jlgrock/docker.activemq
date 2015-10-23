@@ -31,7 +31,7 @@ COPY assets/setup/ /app/setup/
 RUN chmod 755 /app/setup/install
 RUN /app/setup/install
 
-# Expose ports - Openwire/TCP, Jetty, AMQP, STOMP, MQTT, WS
+# Expose ports - Openwire/TCP, Jetty, ActiveMQ, STOMP, MQTT, WS
 EXPOSE 61616 8161 5672 61613 1883 61614
 
 # Create Mount points.  This data will be lost unless you mount a volume with the -v or -volumes-from
