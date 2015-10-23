@@ -1,13 +1,8 @@
 #!/bin/sh
 
-# Load the version from the VERSION file
-for line in $(< VERSION)
-do
-  case $line in
-    ACTIVEMQ=*)  eval $line ;; # beware! eval!
-    *) ;;
-   esac
-done
+# load the versions
+/bin/sh ./loadenv.sh
+
 echo "Processing for ActiveMQ Version $ACTIVEMQ" 
 
 # Build the image
