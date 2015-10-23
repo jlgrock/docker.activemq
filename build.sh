@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # load the versions
-/bin/sh ./loadenv.sh
+. ./loadenv.sh
 
 echo "Processing for ActiveMQ Version $ACTIVEMQ" 
 

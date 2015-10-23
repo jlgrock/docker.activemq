@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # load the versions
-/bin/sh ./loadenv.sh
+. ./loadenv.sh
 
 # Build the image
-/bin/sh ./build.sh
+. ./build.sh
 
 # Publish the image
 docker push jlgrock/activemq:$ACTIVEMQ
