@@ -1,6 +1,8 @@
 # Introduction
 
-Dockerfile to build a ActiveMQ container image.
+Dockerfile to build an ActiveMQ Message Broker container image.
+
+ActiveMQ is embeddable and highly available. Currently this image acts as a stand-alone container in single-node availability.
 
 ## Version
 
