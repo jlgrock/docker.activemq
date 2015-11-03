@@ -1,7 +1,6 @@
 FROM jlgrock/centos-oraclejdk:6.6-8u45
 MAINTAINER Justin Grant <jlgrock@gmail.com>
 
-
 # install necessary packages
 # expectation is that update has been completed
 # and curl/wget are already installed
@@ -13,11 +12,6 @@ RUN yum install -y python-setuptools \
 
 RUN yum install -y logrotate && \
 	yum install -y cronie
- # && \
- #    yum install -y locales && \
- #    update-locale LANG=C.UTF-8 LC_MESSAGES=POSIX && \
- #    locale-gen en_US.UTF-8 && \
- #    dpkg-reconfigure locales
 
 # Copy the app setting
 COPY assets/init.py /app/init.py
